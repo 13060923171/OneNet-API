@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>温度检查系统</title>
+    <link rel="shortcut icon" href="https://s1.ax1x.com/2020/06/23/NNR2p8.jpg">
+    <style type="text/css">
+
+                html,body {
+                    height: 100%;
+
+                    color: #00FF00;
+                }
+                body{
+
+                    background: url(https://s1.ax1x.com/2020/06/23/NNLK5F.jpg)center center;
+                    background-size: cover;
+
+                }
+        </style>
+</head>
+<div style="position: absolute;color:white;font-size:20px; bottom: 60px; right: 30px;">
+    (为1时温度高于34，警报灯开。)
+</div>
+<div style="position: absolute;color:white;font-size:20px; bottom: 30px; right: 30px;">
+    (为0时温度低于34，警报灯关。)
+</div>
+<body>
+<table width="100%" height="100%" cellpadding="0" cellspacing="0">
+            <tr>
+                <td valign="middle" align = "center">
+                    <form>
+                    <font face="times">
+        <span style="font-size:68px;color:purple;font-family:century">智能农业监测系统</span>
+                    </font>
+
+                    </form>
+                    <form>
+                    {% if LED %}
+                        <a>温度报警灯：{{ LED }}</a>
+                        {% endif %}
+                        </form>
+                    <font >
+                        <span style="color:black">
+                        {% if temperature %}
+                        <a>当前温度为：{{ temperature }}°C</a>
+                            {% endif %}</span></font>
+                    <form action="/1" method="post">
+        <!--        <input type="submit" value="post请求" name="bow"/>-->
+        <p></p>
+        <style type="text/css">
+            button {
+        width: 200px;
+        padding:8px;
+        background-color: bisque;
+        color: #357ebd;
+        -moz-border-radius: 10px;
+        -webkit-border-radius: 10px;
+        border-radius: 10px; /* future proofing */
+        -khtml-border-radius: 10px; /* for old Konqueror browsers */
+        text-align: center;
+        vertical-align: middle;
+        border: 1px solid transparent;
+        font-weight: 900;
+        font-size:125%  }
+        </style>
+         <body>
+        <button>
+            温度显示
+        </button>
+        </body>
+    </form>
+       <span style="color:red">
+       {% if humidity %}
+    <a>当前湿度为：{{ humidity }}%</a>
+    {% endif %}</span>
+    <form action="/2" method="post">
+        <!--        <input type="submit" value="post请求" name="bow"/>-->
+        <p></p>
+        <style type="text/css">
+            button {
+        width: 200px;
+        padding:8px;
+        background-color: blueviolet;
+        color: aliceblue;
+        -moz-border-radius: 10px;
+        -webkit-border-radius: 10px;
+        border-radius: 10px; /* future proofing */
+        -khtml-border-radius: 10px; /* for old Konqueror browsers */
+        text-align: center;
+        vertical-align: middle;
+        border: 1px solid transparent;
+        font-weight: 900;
+        font-size:125%  }
+        </style>
+        <body>
+        <button>
+            湿度显示
+        </button>
+        </body>
+        </form>
+        <span style="color:darkslateblue">
+        {% if Turang %}
+    <a>当前土壤的湿度为：{{ Turang }}</a>
+    {% endif %}</span>
+    <form action="/3" method="post">
+        <!--        <input type="submit" value="post请求" name="bow"/>-->
+        <p></p>
+        <button >
+            <style type="text/css">
+            button {
+        width: 200px;
+        padding:8px;
+        background-color: blueviolet;
+        color: aliceblue;
+        -moz-border-radius: 10px;
+        -webkit-border-radius: 10px;
+        border-radius: 10px; /* future proofing */
+        -khtml-border-radius: 10px; /* for old Konqueror browsers */
+        text-align: center;
+        vertical-align: middle;
+        border: 1px solid transparent;
+        font-weight: 900;
+        font-size:125%  }
+        </style>
+            土壤湿度</button>
+
+    </form>
+                </td>
+            </tr>
+        </table>
+<center>
+
+
+</center>
+</body>
+</html>

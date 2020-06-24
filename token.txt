@@ -1,0 +1,3 @@
+products/345759  #后面的数字是产品的ID
+1595403419          #这个时间戳建议调大一点
+dgY85kcfWBvgw0e66WJFkaiySPV0zVDr1jsLphZ2Bmc=   #这个是产品的key值
